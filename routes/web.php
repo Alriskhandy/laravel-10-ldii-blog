@@ -15,4 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('home');
+
+Route::get('/sejarah-ldii', function () {
+    return view('pages.sejarah');
+})->name('sejarah');
+
+Route::get('/kontak', function () {
+    return view('pages.kontak');
+})->name('kontak');
+
+Route::get('/dakwah', function () {
+    return view('pages.kategori');
+})->name('dakwah');
