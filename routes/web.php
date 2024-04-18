@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InformationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,13 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/sejarah-ldii', function () {
-    return view('pages.sejarah');
-})->name('sejarah');
+Route::get('/sejarah-ldii', [InformationController::class, 'getSejarah'])->name('sejarah');
+Route::get('/visi-misi', [InformationController::class, 'getVisimisi'])->name('visi-misi');
+Route::get('/tentang-ldii', [InformationController::class, 'getTentang'])->name('tentang');
+Route::get('/struktur-organisasi', [InformationController::class, 'getStruktur'])->name('struktur-organisasi');
 
 Route::get('/kontak', function () {
     return view('pages.kontak');

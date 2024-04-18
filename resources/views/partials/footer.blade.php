@@ -4,7 +4,11 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-3 col-md-6 footer-contact pt-5">
+                <div class="col-lg-4 col-md-12 footer-newsletter d-flex justify-content-center">
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="">
+                </div>
+
+                <div class="col-lg-4 col-md-4 footer-contact pt-5 text-center">
                     <h3>DPW LDII MALUT</h3>
                     <p>
                         Jl. Pemuda <br>
@@ -15,34 +19,28 @@
                     </p>
                 </div>
 
-                <div class="col-lg-2 col-md-6 footer-links pt-5">
-                    <h4>Useful Links</h4>
+                <div class="col-lg-2 col-md-4 footer-links pt-5">
+                    <h4>Informasi Lembaga</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('sejarah') }}">Sejarah LDII</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('visi-misi') }}">Visi & Misi LDII</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('tentang') }}">Tentang LDII</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="{{ route('struktur-organisasi') }}">Struktur Organisasi</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-6 footer-links pt-5">
-                    <h4>Our Services</h4>
+                <div class="col-lg-2 col-md-4 footer-links pt-5">
+                    <h4>Kategori Berita</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        @foreach ($categories as $c)
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">{{ $c['name'] }}</a></li>
+                        @endforeach
                     </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 footer-newsletter d-flex justify-content-center">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="">
                 </div>
 
             </div>
         </div>
+    </div>
     </div>
 
     <div class="container d-md-flex py-4">

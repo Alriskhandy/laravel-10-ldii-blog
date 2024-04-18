@@ -56,6 +56,8 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+    'api_url' => env('API_URL', 'http://127.0.0.1:8000'),
+    'storage' => env('API_STORAGE', 'http://127.0.0.1:8000/storage'),
 
     'asset_url' => env('ASSET_URL'),
 

@@ -5,9 +5,9 @@
 
             <ol>
                 <li><a href="index.html">Beranda</a></li>
-                <li><a href="blog.html">Sejarah</a></li>
+                <li><a href="blog.html">Visi-Misi</a></li>
             </ol>
-            <h2>Sejarah LDII</h2>
+            <h2>Visi & Misi LDII</h2>
 
         </div>
     </section>

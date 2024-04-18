@@ -1,4 +1,4 @@
-<x-main-layout>
+<x-main-layout title="Kontak - Website LDII MALUT">
     <!-- ======= Breadcrumbs ======= -->
     <section class="breadcrumbs" style="background-color: #073f24;">
         <div class="container">
